@@ -17,7 +17,7 @@ In this project, I took the `objectron` model in TF SavedModel format from [PINT
 *Linux compatible environment is required to run `download.sh` script to get the model*
 ### 2.1 Download the model download script
  Download `download.sh` from [https://github.com/PINTO0309/PINTO_model_zoo/tree/master/36_Objectron/01_float32](https://github.com/PINTO0309/PINTO_model_zoo/tree/master/36_Objectron/01_float32)
-### 2.2 Run `download.sh` to get `object_detection_3d_chair.pb`  
+### 2.2 Run `download.sh` to get `saved_model_object_detection_3d_chair/*`  
 
 ```sh
  ./download.sh
