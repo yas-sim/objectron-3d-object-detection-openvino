@@ -22,6 +22,14 @@ In this project, I took the `objectron` model in TF SavedModel format from [PINT
 ```sh
  ./download.sh
 ```
+You'll get following files (and the other model files too).
+```sh
+saved_model_object_detection_3d_chair/
++ variables
+| + variables.data-00000-of-00001
+| + variables.index
++ saved_model.pb
+```
 
 ## 3. Convert objectron TF model into OpenVINO IR model
 
@@ -45,8 +53,6 @@ python3 objectron.py [-m model.xml] [-i input_image] [--heatmap]
 `-m`: IR model path (default: `./objectron_chair/saved_model.xml`)  
 `-i`: Input image path. A webCam will be used as the input when you specify `cam` (default: `chair.jpg`)  
 `--heatmap`: Display heatmap
-
-
 
 **Command line example:**
 ```sh
