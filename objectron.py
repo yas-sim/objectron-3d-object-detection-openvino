@@ -82,6 +82,12 @@ def main(args):
     outshapes = [ net.outputs[i].shape for i in outblobs ]
     print(inshapes, outshapes)
 
+    for idx, outshape in enumerate(outshapes):
+        if outshape[1]==1:
+            hm_idx = idx
+        if outshape[1]==16:
+            dis_idx = idx
+
     if args.input == 'cam':
         cap = cv2.VideoCapture(0)
 
@@ -98,8 +104,8 @@ def main(args):
 
         res = exenet.infer({inblobs[0]:img})
 
-        hm = res[outblobs[1]]
-        displacements = res[outblobs[0]]
+        hm = res[outblobs[hm_idx]]
+        displacements = res[outblobs[dis_idx]]
 
         # show heatmap
         if args.heatmap == True:
