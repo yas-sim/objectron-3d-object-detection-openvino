@@ -14,6 +14,7 @@ In this project, I took the `objectron` model in TF SavedModel format from [PINT
 * [Intel Distribution of OpenVINO toolkit 2020.2 (or newer)](https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit.html)
 
 ## 2. Download Objectron TensorFlow model from PINTO model zoo
+*Linux compatible environment is required to run `download.sh` script to get the model*
 ### 2.1 Download the model download script
  Download `download.sh` from [https://github.com/PINTO0309/PINTO_model_zoo/tree/master/36_Objectron/01_float32](https://github.com/PINTO0309/PINTO_model_zoo/tree/master/36_Objectron/01_float32)
 ### 2.2 Run `download.sh` to get `object_detection_3d_chair.pb`  
