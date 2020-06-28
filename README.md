@@ -25,7 +25,7 @@ In this project, I took the `objectron` model in TF SavedModel format from [PINT
 You'll get following files (and the other model files too).
 ```sh
 saved_model_object_detection_3d_chair/
-+ variables
++ variables/
 | + variables.data-00000-of-00001
 | + variables.index
 + saved_model.pb
