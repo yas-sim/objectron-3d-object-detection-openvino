@@ -35,6 +35,7 @@ saved_model_object_detection_3d_chair/
 
 Use `Model Optimizer (MO)` to convert the TF model into IR model.
 
+Linux
 ```sh
 python3 ${INTEL_OPENVINO_DIR}/deployment_tools/model_optimizer/mo.py \
  --saved_model_dir saved_model_object_detection_3d_chair \
@@ -42,12 +43,21 @@ python3 ${INTEL_OPENVINO_DIR}/deployment_tools/model_optimizer/mo.py \
  --output_dir objectron_chair \
  --data_type FP16
 ```
+Windows
+```sh
+python "%INTEL_OPENVINO_DIR%\deployment_tools\model_optimizer\mo.py" ^
+ --saved_model_dir saved_model_object_detection_3d_chair ^
+ --scale 255 ^
+ --output_dir objectron_chair ^
+ --data_type FP16```
+
 An IR model `./objectron_chair/saved_model.xml|.bin` will be generated.
 
 ## 4. Run sample program
 
 ```sh
-python3 objectron.py [-m model.xml] [-i input_image] [--heatmap]
+(Linux) python3 objectron.py [-m model.xml] [-i input_image] [--heatmap]
+(Win10) python objectron.py [-m model.xml] [-i input_image] [--heatmap]
 ```
 *Options*  
 `-m`: IR model path (default: `./objectron_chair/saved_model.xml`)  
