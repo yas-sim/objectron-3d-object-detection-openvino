@@ -49,8 +49,8 @@ python "%INTEL_OPENVINO_DIR%\deployment_tools\model_optimizer\mo.py" ^
  --saved_model_dir saved_model_object_detection_3d_chair ^
  --scale 255 ^
  --output_dir objectron_chair ^
- --data_type FP16```
-
+ --data_type FP16
+```
 An IR model `./objectron_chair/saved_model.xml|.bin` will be generated.
 
 ## 4. Run sample program
